@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukhi Poribar Health Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/api/placeholder/50/50" alt="Logo" class="logo-image">
+                <h2>Sukhi Poribar</h2>
+            </div>
+            <button class="new-chat-button">
+                <i class="plus-icon">+</i>
+                New Chat
+            </button>
+            <div class="chat-history">
+                <div class="history-item active">
+                    <i class="chat-icon">💬</i>
+                    Family Health Chat
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-chat">
+            <div class="chat-header">
+                <div class="header-content">
+                    <h1>Family Health Assistant</h1>
+                    <p>Personalized health guidance for your family</p>
+                </div>
+            </div>
+            
+            <div id="chat-messages" class="chat-messages"></div>
+            
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="user-input" 
+                        placeholder="Ask a health-related question..."
+                        rows="1"
+                    ></textarea>
+                    <button id="send-btn" class="send-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
